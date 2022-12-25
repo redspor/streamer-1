@@ -65,6 +65,7 @@ def getstream():
             veri = veri.replace('edge3','edge10')
             veri = veri.replace('edge4','edge10')
             veri = veri.replace('edge2','edge10')
+            veri = veri.replace(':43434','')
             if "m3u8" in veri:
                 return "https://streamer.herokuapp.com/getm3u8?source="+veri+'&videoid='+videoid
         else:
