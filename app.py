@@ -39,6 +39,7 @@ def getstream():  # put application's code here
             veri = veri.replace('edge3','edge10')
             veri = veri.replace('edge4','edge10')
             veri = veri.replace('edge2','edge10')
+            return veri
             if "m3u8" in veri:
                 headers = {
                     "accept": "*/*",
