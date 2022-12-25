@@ -2,3 +2,4 @@ Flask
 gunicorn
 requests
 regex
+flask_cors
