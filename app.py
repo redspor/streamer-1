@@ -2,8 +2,9 @@ import requests
 from flask import Flask
 from flask import request
 import re
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 @app.route('/getm3u8',methods=['GET'])
 def getm3u8():
     source = request.url
