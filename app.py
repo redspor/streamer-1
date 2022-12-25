@@ -58,8 +58,8 @@ def getstream():  # put application's code here
                 }
                 anadomain = veri.split("mediaplaylist")
                 anadomain = anadomain[0]
-                tsal = requests.get(veri,headers=headers)
-                tsal = tsal.text.replace(videoid,anadomain+videoid)
+                '''tsal = requests.get(veri,headers=headers)
+                tsal = tsal.text.replace(videoid,anadomain+videoid)'''
                 tsal = tsal.replace('https://','https://streamer.herokuapp.com/getstream?param=getts&source=https://')
                 return tsal
         else:
