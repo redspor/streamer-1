@@ -9,7 +9,7 @@ def getstream():  # put application's code here
     param = request.args.get("param")
     if param == "getts":
         source = request.url
-        source = source.replace('https://streamer-rxlz.onrender.com/getstream?param=getts&source=','')
+        source = source.replace('https://streamer.herokuapp.com/getstream?param=getts&source=','')
         source = source.replace('%2F','/')
         source = source.replace('%3F','?')
         headers = {
@@ -56,7 +56,7 @@ def getstream():  # put application's code here
                 anadomain = anadomain[0]
                 tsal = requests.get(veri,headers=headers)
                 tsal = tsal.text.replace(videoid,anadomain+videoid)
-                tsal = tsal.replace('https://','https://streamer-rxlz.onrender.com/getstream?param=getts&source=https://')
+                tsal = tsal.replace('https://','https://streamer.herokuapp.com/getstream?param=getts&source=https://')
                 return tsal
         else:
             return "Veri yok"
