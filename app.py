@@ -34,7 +34,7 @@ def getstream():  # put application's code here
         r = requests.post("https://lite-1x163215.top/cinema",json=veriler)
         if "FullscreenAllowed" in r.text:
             veri = r.text
-            veri = re.findall('"URL":"(.*?)"',veri)
+            veri = regex.findall('"URL":"(.*?)"',veri)
             veri = veri[0].replace("\/", "/")
             veri = veri.replace('edge3','edge10')
             veri = veri.replace('edge4','edge10')
