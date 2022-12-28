@@ -28,6 +28,7 @@ def getm3u8():
     }
     ts = requests.get(source, headers=headers)
     tsal = ts.text
+    return tsal
     tsal = tsal.replace(videoid+'_','https://1xstreamer.azurewebsites.net/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/'+videoid+'_')
     return tsal
 
