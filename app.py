@@ -8,7 +8,6 @@ CORS(app)
 @app.route('/getm3u8',methods=['GET'])
 def getm3u8():
     source = request.url
-    return source
     source = source.replace('https://1xstreamer.azurewebsites.net/getm3u8?source=', '')
     source = source.replace('%2F', '/')
     source = source.replace('%3F', '?')
