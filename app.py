@@ -27,7 +27,7 @@ def getm3u8():
         'sec-fetch-site': 'cross-site',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36'
     }
-    ts = requests.get(source, headers=headers)
+    ts = requests.get("https://edge10.xmediaget.com/hls-live/9510503/1/mediaplaylist.m3u8?s=cd345feaa4576d6e7d884e6e52d2d8094648f54bab545219243c0356892f6a48&t=1672273743640&ai=3&av=1025&ui=0", headers=headers)
     tsal = ts.text
     tsal = tsal.replace(videoid+'_','https://1xstreamer.azurewebsites.net/getstream?param=getts&source=https://edge10.xmediaget.com/hls-live/'+videoid+'/1/'+videoid+'_')
     return tsal
